@@ -66,7 +66,7 @@ class Main extends Component {
           <input
             type="text"
             required
-            placeholder="Adicionar repositório aqui cacete"
+            placeholder="Adicione seus repositórios aqui"
             value={newRepo}
             onChange={this.handleInputChange}
           />
@@ -81,10 +81,10 @@ class Main extends Component {
         </Form>
 
         <List>
-          {repositories.map((repositore) => (
-            <li key={repositore.name}>
-              <span>{repositore.name}</span>
-              <Link to={`/repository/${encodeURIComponent(repositore.name)}`}>
+          {repositories.map((repository) => (
+            <li key={repository.name}>
+              <span>{repository.name}</span>
+              <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
                 Detalhes
               </Link>
             </li>
